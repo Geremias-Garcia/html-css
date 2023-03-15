@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caixas</title>
+    <style>
+
+        /*
+
+        se for uma box, para alinhar ao centro tem que usar:
+        margin: auto;
+
+        */
+
+        body{
+            background-color: aqua;
+            font-size: 28px;
+        }
+        h1{/*BOX LEVEL - Se tiver texto ele pula a linha para ter um espaço só pra ele e a continuação vem abaixo(Pode mudar para o modo "inline" com "display: inline")*/
+            
+            background-color: tomato;
+            height: 300px;
+            width: 300px;
+
+            /*
+            resumido abaixo
+            border-width: 10px;
+            border-style: solid;
+            border-color: rgb(0, 0, 0);
+            */
+            border: 10px solid black;
+
+            /*
+            sequencia para informar: cima, direita, embaixo, esquerda.
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+            se todas as medidas forem iguais, basta uma medida de 10px para dizer que todas terão o mesmo valor.
+
+            se informar duas medidas, a primeira vai servir para cima e para baixo, a segunda vai valer para direita e esquerda.
+            */
+
+            padding: 10px 20px;
+
+            /*
+            A ordem é a mesma: Cima, direita, baixo e esquerda.
+
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+
+            Para centralizar, informe a esquerda e a direita como "auto" e ele calcula o espaço.
+            */
+            margin: 20px auto 20px auto;
+
+            /*
+            Sempre seguir essa ordem para informar:
+            outline-width: 8px;
+            outline-style: groove;
+            outline-color: rgb(175, 37, 157);
+            */
+
+            outline: 8px groove rgb(175, 37, 157);
+        }
+        a{/*INLINE LEVEL - ele continua na mesma linha q um texto anterior ou posterior (Pode mudar para o modo "block" com "display: block")*/
+            border-width: 3px;
+            border-style: solid;
+            border-color:rgb(72, 168, 48)
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Paragrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona</p>
+</body>
+</html>
