@@ -11,10 +11,17 @@
         }
         table{
             width: 500px;
+            position: relative;
         }
         td, th {
             border: 1px solid black;
             padding: 10px;
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
         thead, tfoot{
             background-color: grey;
@@ -23,13 +30,30 @@
         td.num{
             text-align: right;
         }
+        thead > tr > th {
+            position: sticky;
+            top: 0;
+            background-color: grey;
+        }
+        tbody > tr:nth-child(odd){
+            background-color: white;
+        }
+        tbody > tr:nth-child(even){
+            background-color: lightgray;
+        }
     </style>
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
     <!--
+
+        PARA EFEITO ZEBRADO, A OPÇÃO PARA LINHA IMPAR É 'ODD' E PARA LINHA PAR É 'EVEN'
+
+        LEMBRAR QUE 'TH' É PARA TITULO E 'TD' É PARA DADO. NÃO ESQUECER NEM CONFUNDIR.
+
         Anatomia para tabelas grandes
         TABLE
+            CAPTION
             HEAD
                 tr, td, th
             BODY
@@ -37,11 +61,12 @@
             FOOTER
                 tr, td, th
     -->
-    <table>
+    <table> 
+        <caption>População das unidades federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -116,8 +141,8 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
-                <td class="num">188.079.754</td>
+                <th scope="row">Total de habitantes</th>
+                <td scope="row" class="num">188.079.754</td>
             </tr>
         </tfoot>
     </table>
