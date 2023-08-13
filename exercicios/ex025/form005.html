@@ -10,11 +10,17 @@
     <h1>Exemplo de Formulário</h1>
     <form action="cadastro.php" method="get" autocomplete="on">
         <fieldset>
+            <!--BOTOES DE RADIO, USAM MESMO NOME POREM ID DIFERENTE-->
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="isxmas"><label for="isxmas">Masculino</label></br>
+            <input type="radio" name="sexo" id="isxfem"><label for="isxfem">Feminino</label>
+        </fieldset>
+        <fieldset>
             <legend>Esportes favoritos</legend>
             <input type="checkbox" name="esfut" id="iesfut"><label for="iesfut">Futebol</label>
-            <input type="checkbox" name="esbas" id="iesbas">Basquete
-            <input type="checkbox" name="esnat" id="iesnat">Natação
-            <input type="checkbox" name="esten" id="iesten">Tênis
+            <input type="checkbox" name="esbas" id="iesbas"><label for="iesbas">Basquete</label>
+            <input type="checkbox" name="esnat" id="iesnat"><label for="iesnat">Natação</label>
+            <input type="checkbox" name="esten" id="iesten"><label for="iesten">Tênis</label>
         </fieldset>
         <p>
             <input type="submit" value="Enviar">
